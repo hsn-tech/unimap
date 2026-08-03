@@ -1,0 +1,165 @@
+/* ============= الخريطة ============= */
+
+/* حاوية الخريطة الرئيسية */
+.map-container-wrapper {
+    flex: 1; /* تأخذ كل المساحة المتاحة */
+    position: relative; 
+    overflow: hidden; 
+    background: #ffffff; 
+    touch-action: manipulation; /* تحسين أداء اللمس على الجوال */
+}
+
+/* خلفية الخريطة في الوضع الليلي */
+.dark .map-container-wrapper {
+    background: #121212; 
+}
+
+/* حجم الأيقونات العادية */
+.icon {
+    width: 1.5rem; /* العرض 24 بكسل تقريباً */
+    height: 1.5rem; /* الارتفاع 24 بكسل تقريباً */
+}
+
+/* حجم الأيقونات الصغيرة */
+.icon-small {
+    width: 1rem; /* العرض 16 بكسل تقريباً */
+    height: 1rem; /* الارتفاع 16 بكسل تقريباً */
+}
+
+/* أدوات التحكم (التنقل والتكبير) - الإعدادات المشتركة */
+.navigation-controls, .zoom-controls {
+    position: absolute; 
+    z-index: 20; 
+    display: flex; 
+    flex-direction: column; 
+    gap: .5rem; 
+}
+
+/* أدوات التنقل (زر البوصلة) */
+.navigation-controls {
+    bottom: 5rem; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* أدوات التكبير والتصغير */
+.zoom-controls {
+    bottom: 5rem; 
+    left: 1rem; 
+}
+
+/* عنصر SVG للخريطة */
+.map-svg {
+    width: 100%; 
+    height: 100%; 
+    cursor: grab; /* إمكانية السحب */
+    display: block; 
+    user-select: none; /* منع تحديد النص */
+    -webkit-user-select: none; /* منع تحديد النص في Safari */
+}
+
+/* مظهر الخريطة أثناء السحب */
+.map-svg.dragging {
+    cursor: grabbing; 
+}
+
+/* مظهر الخريطة في وضع التنقل */
+.map-svg.navigation-mode {
+    cursor: crosshair; 
+}
+
+/* خلفية الخريطة */
+.map-background {
+    fill: #ffffff; 
+}
+
+/* خلفية الخريطة في الوضع الليلي */
+.dark .map-background {
+    fill: #111111; 
+}
+
+/* جدران المبنى الخارجية */
+.building-walls path {
+    stroke: #333333; 
+    stroke-width: 3; 
+    fill: none; 
+}
+
+/* جدران المبنى في الوضع الليلي */
+.dark .building-walls path {
+    stroke: #e0e0e0; 
+}
+
+/* الفواصل بين الغرف */
+.room-divider {
+    stroke-width: 2; 
+}
+
+/* عنصر القاعة (دائرة + أيقونة + نص) */
+.room-element {
+    cursor: pointer; 
+}
+
+/* النصوص داخل عناصر القاعات */
+.room-element text {
+    pointer-events: none; 
+    user-select: none; 
+}
+
+/* خط المسار (الطريق بين نقطتين) */
+.path-line {
+    stroke: #4a90e2; 
+    stroke-width: 4; 
+    fill: none; 
+    stroke-linecap: round; 
+    stroke-linejoin: round; 
+}
+
+/* خط المسار في الوضع الليلي */
+.dark .path-line {
+    stroke: #1e88e5; 
+}
+
+/* علامات البداية والنهاية - الحدود */
+.start-marker, .end-marker {
+    stroke: #ffffff; 
+    stroke-width: 3; 
+}
+
+/* علامات البداية والنهاية في الوضع الليلي */
+.dark .start-marker, .dark .end-marker {
+    stroke: #121212; 
+}
+
+/* علامة نقطة البداية - التعبئة */
+.start-marker {
+    fill: #66bb6a; 
+}
+
+/* علامة نقطة البداية في الوضع الليلي */
+.dark .start-marker {
+    fill: #4caf50; 
+}
+
+/* علامة نقطة النهاية - التعبئة */
+.end-marker {
+    fill: #e53935; 
+}
+
+/* علامة نقطة النهاية في الوضع الليلي */
+.dark .end-marker {
+    fill: #d32f2f; 
+}
+/* أيقونات القاعات */
+.room-element path,
+.room-element circle {
+    fill: #ffffff; 
+}
+
+/* أيقونات القاعات في الوضع الليلي */
+.dark .room-element path,
+.dark .room-element circle {
+    fill: #000000; 
+}

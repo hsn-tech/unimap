@@ -1,0 +1,64 @@
+/* ============= القائمة السفلية ============= */
+
+/* القائمة السفلية الثابتة - الشريط اللي تحت فيه أيقونات التنقل */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    display: none; /* مخفية بشكل افتراضي (تظهر بعد تسجيل الدخول) */
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+/* شكل القائمة السفلية بالوضع الليلي */
+.dark .bottom-nav {
+    background: #1e1e1e;
+    border-top-color: #424242;
+}
+
+/* عنصر التنقل - كل أيقونة في القائمة السفلية (طلاب، حضور، إحصائيات، معلومات) */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-size: 11px;
+    color: #757575;
+    width: 60px;
+}
+
+/* لون عنصر التنقل بالوضع الليلي */
+.dark .nav-item {
+    color: #9e9e9e;
+}
+
+/* الأيقونة داخل عنصر التنقل */
+.nav-item svg {
+    width: 24px;
+    height: 24px;
+    color: #757575;
+}
+
+/* لون الأيقونة بالوضع الليلي */
+.dark .nav-item svg {
+    color: #9e9e9e;
+}
+
+/* عنصر التنقل النشط - الصفحة المفتوحة حالياً */
+.nav-item.active, .nav-item.active svg {
+    color: #4a90e2;
+}
+
+/* لون عنصر التنقل النشط بالوضع الليلي */
+.dark .nav-item.active, .dark .nav-item.active svg {
+    color: #1e88e5;
+}

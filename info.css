@@ -1,0 +1,88 @@
+/* ============= صفحة المعلومات ============= */
+
+/* الحاوية الرئيسية لمحتوى صفحة المعلومات */
+.info-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+}
+
+/* قسم المعلومات - الخلفية الرمادية اللي فيها العنوان */
+.info-section {
+    padding: 20px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* شكل قسم المعلومات بالوضع الليلي */
+.dark .info-section {
+    background: #2a2a2a;
+    border-bottom-color: #424242;
+}
+
+/* عنوان القسم الرئيسي (مثل: معلومات التطبيق) */
+.info-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4a90e2;
+}
+
+/* لون عنوان القسم بالوضع الليلي */
+.dark .info-title {
+    color: #1e88e5;
+}
+
+/* العنوان الفرعي تحت العنوان الرئيسي */
+.info-subtitle {
+    font-size: 13px;
+    color: #757575;
+}
+
+/* لون العنوان الفرعي بالوضع الليلي */
+.dark .info-subtitle {
+    color: #9e9e9e;
+}
+
+/* صف المعلومات (الأيقونة + الوصف + القيمة) */
+.info-item {
+    display: flex; /* ترتيب العناصر جنب بعض */
+    align-items: flex-start; /* محاذاة العناصر من فوق */
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0; /* خط فاصل بين العناصر */
+    gap: 16px;
+    cursor: pointer;
+}
+
+/* شكل صف المعلومات بالوضع الليلي */
+.dark .info-item {
+    border-bottom-color: #424242;
+}
+
+/* الأيقونة اللي على اليسار */
+.info-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* النص الوصفي (مثل: الإصدار، المطور) */
+.info-label {
+    font-size: 13px;
+    color: #757575;
+}
+
+/* لون النص الوصفي بالوضع الليلي */
+.dark .info-label {
+    color: #9e9e9e;
+}
+
+/* القيمة الفعلية للمعلومة (مثل: 1.0.0، اسم المطور) */
+.info-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a90e2;
+}
+
+/* لون القيمة بالوضع الليلي */
+.dark .info-value {
+    color: #1e88e5;
+}

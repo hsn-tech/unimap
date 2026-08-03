@@ -1,0 +1,234 @@
+/* ============= النوافذ المنبثقة (Modals) ============= */
+
+/* الخلفية السوداء الشفافة */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+/* الخلفية بالوضع الليلي */
+.dark .modal {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* النافذة لما تكون مفتوحة */
+.modal.active {
+    display: flex;
+}
+
+/* صندوق النافذة الأبيض */
+.modal-content {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* الصندوق بالوضع الليلي */
+.dark .modal-content {
+    background: #1e1e1e;
+}
+
+/* رأس النافذة (العنوان وزر X) */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background: #f5f5f5;
+    border-bottom: 2px solid #e0e0e0;
+    border-radius: 16px 16px 0 0;
+    margin: -24px -24px 20px;
+}
+
+/* الرأس بالوضع الليلي */
+.dark .modal-header {
+    background: #2a2a2a;
+    border-bottom-color: #424242;
+}
+
+/* عنوان النافذة */
+.modal-header h2, .modal-header h3 {
+    font-size: 18px;
+    color: #4a90e2;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* العنوان بالوضع الليلي */
+.dark .modal-header h2, .dark .modal-header h3 {
+    color: #1e88e5;
+}
+
+/* زر الإغلاق (X) */
+.modal-close {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+    color: #4a90e2;
+    cursor: pointer;
+}
+
+/* زر الإغلاق بالوضع الليلي */
+.dark .modal-close {
+    background: #1e1e1e;
+    border-color: #424242;
+    color: #1e88e5;
+}
+
+/* زر الإغلاق عند التمرير - يحمر */
+.modal-close:hover {
+    background: #e53935;
+    color: #ffffff;
+    border-color: #e53935;
+}
+
+/* محتوى تفاصيل القاعة */
+.room-details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+}
+
+/* صف معلومة واحد */
+.room-detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* الصف بالوضع الليلي */
+.dark .room-detail-item {
+    border-bottom-color: #424242;
+}
+
+/* اسم المعلومة (النص الرمادي) */
+.detail-label {
+    font-size: 13px;
+    color: #757575;
+    font-weight: 500;
+}
+
+/* القيمة (النص الأزرق) */
+.detail-value {
+    font-size: 14px;
+    color: #4a90e2;
+    font-weight: 600;
+}
+
+/* القيمة بالوضع الليلي */
+.dark .detail-value {
+    color: #1e88e5;
+}
+
+/* زر إضافة للمفضلة */
+.btn-favorite {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background: #f5f5f5;
+    color: #4a90e2;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* الزر بالوضع الليلي */
+.dark .btn-favorite {
+    background: #2a2a2a;
+    border-color: #424242;
+    color: #1e88e5;
+}
+
+/* الزر لما تكون القاعة مضافة - يصير أصفر */
+.btn-favorite.favorited {
+    background: #ffe600;
+    color: #4a90e2;
+    border-color: #ffe600;
+}
+
+/* زر الانتقال للطابق - الزر الأزرق */
+.btn-navigate {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    background: #4a90e2;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* الزر بالوضع الليلي */
+.dark .btn-navigate {
+    background: #1e88e5;
+    color: #121212;
+}
+
+/* رسالة التنبيه اللي تطلع فوق */
+.toast-message {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+    background: #4a90e2;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* الرسالة بالوضع الليلي */
+.dark .toast-message {
+    background: #1e88e5;
+    color: #121212;
+}
+
+/* نافذة الوقت التقديري */
+.time-popup {
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: .5rem;
+    z-index: 100;
+}
+
+.time-popup.hidden {
+    display: none;
+}
+
+.time-popup-content {
+    background: #4a90e2;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+}
+
+.dark .time-popup-content {
+    background: #1e88e5;
+    color: #121212;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}

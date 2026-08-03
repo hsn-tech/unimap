@@ -1,0 +1,144 @@
+/* ============= القائمة الجانبية (Hamburger Menu) ============= */
+
+/* النافذة المنبثقة - الصندوق اللي يطلع في النص */
+#sidebar-menu.modal {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 85%;
+    max-width: 450px;
+    max-height: 70vh;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    display: none;
+    z-index: 1001;
+}
+
+/* النافذة بالوضع الليلي */
+.dark #sidebar-menu.modal {
+    background: #1e1e1e;
+}
+
+/* النافذة لما تكون مفتوحة */
+#sidebar-menu.modal.active {
+    display: block;
+}
+
+/* الخلفية السوداء الشفافة */
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+/* الخلفية لما تكون مفتوحة */
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* عنوان القسم (الطوابق / المفضلة) */
+.sidebar-title {
+    font-size: 14px;
+    color: #4a90e2;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* العنوان بالوضع الليلي */
+.dark .sidebar-title {
+    color: #1e88e5;
+}
+
+/* حاوية أزرار الطوابق */
+.floor-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+/* زر الطابق (الأول، الثاني، الثالث) */
+.floor-btn {
+    flex: 1;
+    padding: 12px;
+    background: #f5f5f5;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    color: #4a90e2;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* زر الطابق بالوضع الليلي */
+.dark .floor-btn {
+    background: #2a2a2a;
+    border-color: #424242;
+    color: #1e88e5;
+}
+
+/* زر الطابق المختار */
+.floor-btn.active {
+    background: #4a90e2;
+    color: #ffffff;
+}
+
+/* زر الطابق المختار بالوضع الليلي */
+.dark .floor-btn.active {
+    background: #1e88e5;
+    color: #121212;
+}
+
+/* قائمة الفصول المفضلة */
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* فصل مفضل واحد */
+.favorite-item {
+    padding: 12px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    color: #4a90e2;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* الفصل المفضل بالوضع الليلي */
+.dark .favorite-item {
+    background: #2a2a2a;
+    color: #1e88e5;
+}
+
+/* الفصل المفضل عند التمرير عليه */
+.favorite-item:hover {
+    background: #4a90e2;
+    color: #ffffff;
+}
+
+/* التمرير بالوضع الليلي */
+.dark .favorite-item:hover {
+    background: #1e88e5;
+    color: #121212;
+}
+
+/* رسالة "لا توجد مفضلة" */
+.empty-favorites {
+    color: #757575;
+    text-align: center;
+    padding: 20px;
+}
+
+/* الرسالة بالوضع الليلي */
+.dark .empty-favorites {
+    color: #9e9e9e;
+}

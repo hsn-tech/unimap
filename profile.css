@@ -1,0 +1,174 @@
+/* ============= الملف الشخصي ============= */
+
+/* محتوى الملف الشخصي */
+.profile-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+}
+
+/* قسم الصورة الشخصية والاسم - المنطقة الرمادية في الأعلى */
+.profile-avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* شكل قسم الصورة الشخصية بالوضع الليلي */
+.dark .profile-avatar-section {
+    background: #2a2a2a;
+    border-bottom-color: #424242;
+}
+
+/* الصورة الشخصية - الدائرة اللي فيها أيقونة المستخدم */
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+/* شكل الصورة الشخصية بالوضع الليلي */
+.dark .profile-avatar {
+    background: #424242;
+}
+
+/* أيقونة المستخدم داخل الصورة الشخصية */
+.profile-avatar svg {
+    width: 40px;
+    height: 40px;
+    color: #4a90e2;
+}
+
+/* لون أيقونة المستخدم بالوضع الليلي */
+.dark .profile-avatar svg {
+    color: #1e88e5;
+}
+
+/* اسم المستخدم تحت الصورة */
+.profile-name {
+    font-size: 14px;
+    text-align: center;
+    color: #4a90e2;
+    font-weight: 500;
+}
+
+/* لون اسم المستخدم بالوضع الليلي */
+.dark .profile-name {
+    color: #1e88e5;
+}
+
+/* خيار في قائمة الملف الشخصي (مثل: الوضع الليلي، تسجيل الخروج) */
+.profile-option {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 16px;
+    cursor: pointer;
+}
+
+/* شكل الخيار بالوضع الليلي */
+.dark .profile-option {
+    border-bottom-color: #424242;
+}
+
+/* نص الخيار (مثل: الوضع الليلي) */
+.profile-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a90e2;
+}
+
+/* لون نص الخيار بالوضع الليلي */
+.dark .profile-label {
+    color: #1e88e5;
+}
+
+/* خيار تسجيل الخروج - مسافة مختلفة بين العناصر */
+.profile-option.logout {
+    gap: 12px;
+}
+
+/* أيقونة تسجيل الخروج */
+.logout-icon {
+    width: 24px;
+    height: 24px;
+    color: #4a90e2;
+}
+
+/* لون أيقونة تسجيل الخروج بالوضع الليلي */
+.dark .logout-icon {
+    color: #1e88e5;
+}
+
+/* مفتاح التبديل (Toggle Switch) - المفتاح اللي يشغل ويطفي الوضع الليلي */
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 28px;
+    margin-right: auto;
+}
+
+/* إخفاء مربع الاختيار الأصلي */
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* شريط المفتاح - الخلفية المستطيلة */
+.toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e0e0e0;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+/* شكل شريط المفتاح بالوضع الليلي */
+.dark .toggle-slider {
+    background: #424242;
+}
+
+/* الدائرة المتحركة داخل المفتاح */
+.toggle-slider:before {
+    content: "";
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    right: 3px;
+    bottom: 3px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+/* لون الدائرة بالوضع الليلي */
+.dark .toggle-slider:before {
+    background: #121212;
+}
+
+/* لون شريط المفتاح عند التشغيل (وضع مفعّل) */
+input:checked + .toggle-slider {
+    background: #4a90e2;
+}
+
+/* لون شريط المفتاح عند التشغيل بالوضع الليلي */
+.dark input:checked + .toggle-slider {
+    background: #1e88e5;
+}
+
+/* حركة الدائرة عند التشغيل - تنتقل لليسار */
+input:checked + .toggle-slider:before {
+    transform: translateX(-22px);
+}
